@@ -1,5 +1,11 @@
 # Rust Emscripten bug related to threads + auto-dereferencing?
 
+You can try this bug by running:
+```
+make wasm
+```
+
+## Context
 When compiling Rust with emscripten I get the following error:
 ```
 note: [parse exception: attempted pop from empty stack / beyond block start boundary at 5012790 (at 0:5012790)]
@@ -46,8 +52,5 @@ let test = test
 println!("Values: {:?}", test);
 ```
 Note that this error only occurs when compiling Rust with threads.
-
-You can view the repo with the full reproduction [here](https://github.com/zackradisic/rust-emscripten-bug).
-
 
 
