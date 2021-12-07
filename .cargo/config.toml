@@ -1,0 +1,5 @@
+[build]
+rustflags = ["-C", "target-feature=+atomics,+bulk-memory", "-C", "link-args=-O3 -pthread -s ALLOW_MEMORY_GROWTH=0 -s INVOKE_RUN=0 -s INITIAL_MEMORY=2146435072 -s MODULARIZE=1 -s EXPORT_NAME=rustEmscriptenBug -s USE_PTHREADS=1 -s PROXY_TO_PTHREAD=1 -s ENVIRONMENT=worker"]
+
+[unstable]
+build-std = ["panic_abort", "std"]
